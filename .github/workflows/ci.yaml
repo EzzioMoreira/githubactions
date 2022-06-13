@@ -55,8 +55,9 @@ jobs:
       AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
       TERRAFORM_VERSION: "1.0.0"
     steps:
-      - uses: actions/checkout@v3
-        name: Terraform Init
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Terraform Init
         run: |
           docker run --rm -v /iac:/app -e $AWS_ACCESS_KEY_ID -e $AWS_SECRET_ACCESS_KEY -w /app/ hashicorp/terraform:$(TERRAFORM_VERSION) init
   
