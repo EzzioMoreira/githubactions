@@ -22,9 +22,9 @@ jobs:
         
       - name: Notifica time Discord
         uses: th0th/notify-discord@v0.4.1
-        if: ${{ always() }}
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.WEBHOOK_DISCORD }}
           GITHUB_ACTOR: ${{ github.actor }}
           GITHUB_JOB_NAME: "build"
           GITHUB_JOB_STATUS: ${{ job.status }}
+          GIT_COMMIT=`git log -n 1 --pretty=format:"%s - autor: %an email: %ce"`
