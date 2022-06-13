@@ -59,7 +59,7 @@ jobs:
         uses: actions/checkout@v3
       - name: Terraform Init
         run: |
-          docker run --rm -v /iac:/app -e $AWS_ACCESS_KEY_ID -e $AWS_SECRET_ACCESS_KEY -w /app/ hashicorp/terraform:$TERRAFORM_VERSION init
+          docker run --rm -v $PWD::/app -e $AWS_ACCESS_KEY_ID -e $AWS_SECRET_ACCESS_KEY -w /app/ hashicorp/terraform:$TERRAFORM_VERSION init -chdir=iac
   
   notifica:
     runs-on: ubuntu-latest
