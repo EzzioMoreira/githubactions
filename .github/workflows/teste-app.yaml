@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        go: [ '1.15', '1.16', '1.16' ]
+        go: [ '1.15', '1.16', '1.17' ]
     name: Go ${{ matrix.go }} teste execução
     steps:
       - uses: actions/checkout@v3
@@ -39,9 +39,11 @@ jobs:
 
       - name: Build and push
         uses: docker/build-push-action@v3
+        env: 
+          TAG: $(echo ${GITHUB_SHA} | cut -c1-8)
         with:
           push: true
-          tags: ezziomoreira/appmetalcorp:latest
+          tags: ezziomoreira/appmetalcorp:$TAG
   
   notifica:
     runs-on: ubuntu-latest
@@ -52,5 +54,5 @@ jobs:
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.WEBHOOK_DISCORD }}
           GITHUB_ACTOR: ${{ github.actor }}
-          GITHUB_JOB_NAME: "Teste aplicação Metal Corp"
+          GITHUB_JOB_NAME: "Pipeline aplicação Metal Corp"
           GITHUB_JOB_STATUS: ${{ job.status }}
