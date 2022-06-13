@@ -30,6 +30,7 @@ jobs:
   
   build:
     runs-on: ubuntu-latest
+    needs: [teste]
     steps:
       - uses: actions/checkout@v3
       - name: Docker setup
@@ -48,4 +49,4 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: user/appmetalcorp:lastes
+          tags: ezziomoreira/appmetalcorp:lastes
