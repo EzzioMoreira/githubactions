@@ -19,3 +19,8 @@ jobs:
         with:
           go-version: ${{ matrix.go }}
       - run: go run main.go
+
+      - name: Testa Aplicação
+        run: |
+          export TESTE=`curl --head http://localhost:8080 | awk -F":" '{print "HTTP/1.1" $1}' | grep 200 | wc -l`
+          [ $TESTE = 1 ] &&  { echo "Aplicação funcionando.";  exit 0;} || { echo "Aplicação não está funcionando."; exit 1; }
