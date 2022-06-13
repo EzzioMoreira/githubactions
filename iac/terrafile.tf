@@ -1,12 +1,12 @@
 provider "aws" {
   region  = "us-east-2"
-  version = "~> 3.0"
+#  version = "~> 3.0"
 }
 
 terraform {
   backend "s3" {
-    bucket = "your-bucket-here"
-    key    = "path/keyname-terraform-.tfstate"
+    bucket = "appmetalcorp"
+    key    = "app/rapadura-terraform.tfstate"
     region = "us-east-2"
   }
 } 
@@ -14,12 +14,12 @@ terraform {
 module "app-deploy" {
   source                 = "git@github.com:EzzioMoreira/modulo-awsecs-fargate.git?ref=master"
   containers_definitions = data.template_file.containers_definitions_json.rendered
-  environment            = "your-environment"
-  app_name               = "your-app-name"
+  environment            = "production"
+  app_name               = "metalcorp"
   app_count              = "2"
-  app_port               = "80"
+  app_port               = "8080"
   fargate_version        = "1.4.0"
-  cloudwatch_group_name  = "your-grouplog-name"
+  cloudwatch_group_name  = "metalcorp"
 }
 
 output "load_balancer_dns_name" {
@@ -37,16 +37,16 @@ data "template_file" "containers_definitions_json" {
 }
 
 variable "APP_VERSION" {
-  default   = "latest"
+  default   = "0869fa9b"
   description = "Version comes from git commit in Makefile"
 }
 
 variable "APP_IMAGE" {
-  default   = "your-image-name"
+  default   = "metalcorp"
   description = "Name comes from variable APP_IMAGE in Makefile"
 }
 
 variable "AWS_ACCOUNT" {
-  default   = "your-account-id"
+  default   = "520044189785"
   description = "Get the value of variable AWS_ACCOUNT in Makefile"
 }

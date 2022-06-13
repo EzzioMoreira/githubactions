@@ -1,0 +1,1 @@
+{"Modules":[{"Key":"","Source":"","Dir":"."},{"Key":"app-deploy","Source":"git@github.com:EzzioMoreira/modulo-awsecs-fargate.git?ref=master","Dir":".terraform/modules/app-deploy"}]}

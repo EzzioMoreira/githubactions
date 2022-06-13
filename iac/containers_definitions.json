@@ -1,0 +1,15 @@
+[
+  {
+    "cpu": 256,
+    "image": "${AWS_ACCOUNT}.dkr.ecr.us-east-2.amazonaws.com/${APP_IMAGE}:${APP_VERSION}",
+    "memory": 256,
+    "name": "${APP_IMAGE}",
+    "networkMode": "awsvpc",
+    "portMappings": [
+      {
+        "containerPort": 8080,
+        "hostPort": 8080
+      }
+    ]
+  }
+]
