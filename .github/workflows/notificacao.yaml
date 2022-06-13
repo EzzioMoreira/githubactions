@@ -1,0 +1,17 @@
+name: Notifica time Discord
+on:
+  push:
+    branches:
+      - '**'
+
+jobs:
+  notify:
+    name: Discord Notification
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - uses: fateyan/action-discord-notifier@v1
+        with:
+          message-title: New Commits Pushed
+          webhook: ${{ secrets.WEBHOOK-DISCORD }}
