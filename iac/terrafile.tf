@@ -12,7 +12,7 @@ terraform {
 } 
 
 module "app-deploy" {
-  source                 = "git@github.com:EzzioMoreira/modulo-awsecs-fargate.git?ref=master"
+  source                 = "git::https://github.com/EzzioMoreira/modulo-awsecs-fargate.git?ref=master"
   containers_definitions = data.template_file.containers_definitions_json.rendered
   environment            = "production"
   app_name               = "metalcorp"
