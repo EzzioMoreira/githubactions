@@ -25,5 +25,5 @@ jobs:
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.WEBHOOK_DISCORD }}
           GITHUB_ACTOR: ${{ github.actor }}
-          GITHUB_JOB_NAME: "build"
+          GITHUB_JOB_NAME: "Teste aplicação Metal Corp"
           GITHUB_JOB_STATUS: ${{ job.status }}
