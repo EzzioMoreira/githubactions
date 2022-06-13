@@ -49,4 +49,4 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: ezziomoreira/appmetalcorp:lastes
+          tags: ezziomoreira/appmetalcorp:$(echo ${GITHUB_SHA} | cut -c1-8)
