@@ -1,7 +1,7 @@
 [
   {
     "cpu": 256,
-    "image": "520044189785.dkr.ecr.us-east-2.amazonaws.com/metalcorp:12345",
+    "image": "520044189785.dkr.ecr.us-east-2.amazonaws.com/metalcorp:${TAG_IMAGE}",
     "memory": 256,
     "name": "metalcorp",
     "networkMode": "awsvpc",

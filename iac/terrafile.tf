@@ -28,12 +28,6 @@ output "load_balancer_dns_name" {
 
 data "template_file" "containers_definitions_json" {
   template = file("./containers_definitions.json")
-
-  vars = {
-    APP_VERSION = var.APP_VERSION
-    APP_IMAGE   = var.APP_IMAGE
-    AWS_ACCOUNT = var.AWS_ACCOUNT
-  }
 }
 
 variable "APP_VERSION" {
