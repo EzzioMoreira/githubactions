@@ -37,7 +37,7 @@ data "template_file" "containers_definitions_json" {
 }
 
 variable "APP_VERSION" {
-  default   = "0869fa9b"
+  default   = "latest"
   description = "Version comes from git commit in Makefile"
 }
 

@@ -43,8 +43,8 @@ jobs:
         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
         ECR_REPOSITORY: metalcorp
       run: |
-        docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$(echo ${GITHUB_SHA} | cut -c1-8) .
-        docker push $ECR_REGISTRY/$ECR_REPOSITORY:$(echo ${GITHUB_SHA} | cut -c1-8)
+        docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:lastest .
+        docker push $ECR_REGISTRY/$ECR_REPOSITORY:latest
   
   deploy:
     runs-on: ubuntu-latest
@@ -58,11 +58,9 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
         run: |
-          export TAG_IMAGE=`echo ${GITHUB_SHA} | cut -c1-8`
-          envsubst <./template/terrafile.tf >/iac/terrafile.yaml
           docker run --rm -v $PWD:/app -e AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID -e AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY -w /app/ --entrypoint "" hashicorp/terraform:$TERRAFORM_VERSION sh -c 'terraform -chdir=iac init'
           docker run --rm -v $PWD:/app -e AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID -e AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY -w /app/ --entrypoint "" hashicorp/terraform:$TERRAFORM_VERSION sh -c 'terraform -chdir=iac plan'
-#          docker run --rm -v $PWD:/app -e AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID -e AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY -w /app/ --entrypoint "" hashicorp/terraform:$TERRAFORM_VERSION sh -c 'terraform -chdir=iac apply -auto-approve'
+          docker run --rm -v $PWD:/app -e AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID -e AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY -w /app/ --entrypoint "" hashicorp/terraform:$TERRAFORM_VERSION sh -c 'terraform -chdir=iac apply -auto-approve'
   
   notifica:
     runs-on: ubuntu-latest
