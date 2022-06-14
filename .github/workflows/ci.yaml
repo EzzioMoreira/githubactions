@@ -43,7 +43,7 @@ jobs:
         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
         ECR_REPOSITORY: metalcorp
       run: |
-        docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:lastest .
+        docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:latest .
         docker push $ECR_REGISTRY/$ECR_REPOSITORY:latest
   
   deploy:
