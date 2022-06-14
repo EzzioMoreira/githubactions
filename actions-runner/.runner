@@ -1,0 +1,9 @@
+﻿{
+  "agentId": 21,
+  "agentName": "pagar",
+  "poolId": 1,
+  "poolName": "Default",
+  "serverUrl": "https://pipelines.actions.githubusercontent.com/9EEcPKUTr4uLvGI2fLQyT6M9JbvpcZCDdzpN6wUyNc2QhcEzG4",
+  "gitHubUrl": "https://github.com/EzzioMoreira/githubactions",
+  "workFolder": "_work"
+}

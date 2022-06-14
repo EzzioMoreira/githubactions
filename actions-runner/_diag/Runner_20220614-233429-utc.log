@@ -1,0 +1,205 @@
+[2022-06-14 23:34:29Z INFO HostContext] No proxy settings were found based on environmental variables (http_proxy/https_proxy/HTTP_PROXY/HTTPS_PROXY)
+[2022-06-14 23:34:29Z INFO HostContext] Well known directory 'Bin': '/home/ezzio/Documentos/projetos/particular/githubactions/actions-runner/bin'
+[2022-06-14 23:34:29Z INFO HostContext] Well known directory 'Root': '/home/ezzio/Documentos/projetos/particular/githubactions/actions-runner'
+[2022-06-14 23:34:29Z INFO HostContext] Well known config file 'Credentials': '/home/ezzio/Documentos/projetos/particular/githubactions/actions-runner/.credentials'
+[2022-06-14 23:34:29Z INFO HostContext] Well known directory 'Bin': '/home/ezzio/Documentos/projetos/particular/githubactions/actions-runner/bin'
+[2022-06-14 23:34:29Z INFO HostContext] Well known directory 'Root': '/home/ezzio/Documentos/projetos/particular/githubactions/actions-runner'
+[2022-06-14 23:34:29Z INFO HostContext] Well known config file 'Runner': '/home/ezzio/Documentos/projetos/particular/githubactions/actions-runner/.runner'
+[2022-06-14 23:34:29Z INFO Listener] Runner is built for Linux (X64) - linux-x64.
+[2022-06-14 23:34:29Z INFO Listener] RuntimeInformation: Linux 5.14.0-1038-oem #42-Ubuntu SMP Thu May 19 05:03:08 UTC 2022.
+[2022-06-14 23:34:29Z INFO Listener] Version: 2.292.0
+[2022-06-14 23:34:29Z INFO Listener] Commit: d4b794dd645e16990ae0530bf977e26ab24be9d9
+[2022-06-14 23:34:29Z INFO Listener] Culture: pt-BR
+[2022-06-14 23:34:29Z INFO Listener] UI Culture: pt-BR
+[2022-06-14 23:34:29Z INFO HostContext] Well known directory 'Bin': '/home/ezzio/Documentos/projetos/particular/githubactions/actions-runner/bin'
+[2022-06-14 23:34:29Z INFO HostContext] Well known directory 'Root': '/home/ezzio/Documentos/projetos/particular/githubactions/actions-runner'
+[2022-06-14 23:34:29Z INFO Listener] Validating directory permissions for: '/home/ezzio/Documentos/projetos/particular/githubactions/actions-runner'
+[2022-06-14 23:34:29Z INFO CommandLineParser] Parse
+[2022-06-14 23:34:29Z INFO CommandLineParser] Parsing 5 args
+[2022-06-14 23:34:29Z INFO CommandLineParser] parsing argument
+[2022-06-14 23:34:29Z INFO CommandLineParser] HasArgs: False
+[2022-06-14 23:34:29Z INFO CommandLineParser] Adding Command: configure
+[2022-06-14 23:34:29Z INFO CommandLineParser] parsing argument
+[2022-06-14 23:34:29Z INFO CommandLineParser] HasArgs: True
+[2022-06-14 23:34:29Z INFO CommandLineParser] arg: url
+[2022-06-14 23:34:29Z INFO CommandLineParser] parsing argument
+[2022-06-14 23:34:29Z INFO CommandLineParser] HasArgs: True
+[2022-06-14 23:34:29Z INFO CommandLineParser] Adding option 'url': 'https://github.com/EzzioMoreira/githubactions'
+[2022-06-14 23:34:29Z INFO CommandLineParser] parsing argument
+[2022-06-14 23:34:29Z INFO CommandLineParser] HasArgs: True
+[2022-06-14 23:34:29Z INFO CommandLineParser] arg: token
+[2022-06-14 23:34:29Z INFO CommandLineParser] parsing argument
+[2022-06-14 23:34:29Z INFO CommandLineParser] HasArgs: True
+[2022-06-14 23:34:29Z INFO CommandLineParser] Adding option 'token': '***'
+[2022-06-14 23:34:29Z INFO Listener] Arguments parsed
+[2022-06-14 23:34:29Z INFO Runner] ExecuteCommand
+[2022-06-14 23:34:29Z INFO ConfigurationStore] currentAssemblyLocation: /home/ezzio/Documentos/projetos/particular/githubactions/actions-runner/bin/Runner.Listener.dll
+[2022-06-14 23:34:29Z INFO HostContext] Well known directory 'Bin': '/home/ezzio/Documentos/projetos/particular/githubactions/actions-runner/bin'
+[2022-06-14 23:34:29Z INFO ConfigurationStore] binPath: /home/ezzio/Documentos/projetos/particular/githubactions/actions-runner/bin
+[2022-06-14 23:34:29Z INFO HostContext] Well known directory 'Bin': '/home/ezzio/Documentos/projetos/particular/githubactions/actions-runner/bin'
+[2022-06-14 23:34:29Z INFO HostContext] Well known directory 'Root': '/home/ezzio/Documentos/projetos/particular/githubactions/actions-runner'
+[2022-06-14 23:34:29Z INFO ConfigurationStore] RootFolder: /home/ezzio/Documentos/projetos/particular/githubactions/actions-runner
+[2022-06-14 23:34:29Z INFO HostContext] Well known directory 'Bin': '/home/ezzio/Documentos/projetos/particular/githubactions/actions-runner/bin'
+[2022-06-14 23:34:29Z INFO HostContext] Well known directory 'Root': '/home/ezzio/Documentos/projetos/particular/githubactions/actions-runner'
+[2022-06-14 23:34:29Z INFO HostContext] Well known config file 'Runner': '/home/ezzio/Documentos/projetos/particular/githubactions/actions-runner/.runner'
+[2022-06-14 23:34:29Z INFO ConfigurationStore] ConfigFilePath: /home/ezzio/Documentos/projetos/particular/githubactions/actions-runner/.runner
+[2022-06-14 23:34:29Z INFO HostContext] Well known directory 'Bin': '/home/ezzio/Documentos/projetos/particular/githubactions/actions-runner/bin'
+[2022-06-14 23:34:29Z INFO HostContext] Well known directory 'Root': '/home/ezzio/Documentos/projetos/particular/githubactions/actions-runner'
+[2022-06-14 23:34:29Z INFO HostContext] Well known config file 'Credentials': '/home/ezzio/Documentos/projetos/particular/githubactions/actions-runner/.credentials'
+[2022-06-14 23:34:29Z INFO ConfigurationStore] CredFilePath: /home/ezzio/Documentos/projetos/particular/githubactions/actions-runner/.credentials
+[2022-06-14 23:34:29Z INFO HostContext] Well known directory 'Bin': '/home/ezzio/Documentos/projetos/particular/githubactions/actions-runner/bin'
+[2022-06-14 23:34:29Z INFO HostContext] Well known directory 'Root': '/home/ezzio/Documentos/projetos/particular/githubactions/actions-runner'
+[2022-06-14 23:34:29Z INFO HostContext] Well known config file 'MigratedCredentials': '/home/ezzio/Documentos/projetos/particular/githubactions/actions-runner/.credentials_migrated'
+[2022-06-14 23:34:29Z INFO ConfigurationStore] MigratedCredFilePath: /home/ezzio/Documentos/projetos/particular/githubactions/actions-runner/.credentials_migrated
+[2022-06-14 23:34:29Z INFO HostContext] Well known directory 'Bin': '/home/ezzio/Documentos/projetos/particular/githubactions/actions-runner/bin'
+[2022-06-14 23:34:29Z INFO HostContext] Well known directory 'Root': '/home/ezzio/Documentos/projetos/particular/githubactions/actions-runner'
+[2022-06-14 23:34:29Z INFO HostContext] Well known config file 'Service': '/home/ezzio/Documentos/projetos/particular/githubactions/actions-runner/.service'
+[2022-06-14 23:34:29Z INFO ConfigurationStore] ServiceConfigFilePath: /home/ezzio/Documentos/projetos/particular/githubactions/actions-runner/.service
+[2022-06-14 23:34:29Z INFO CommandSettings] Flag 'help': 'False'
+[2022-06-14 23:34:29Z INFO CommandSettings] Flag 'version': 'False'
+[2022-06-14 23:34:29Z INFO CommandSettings] Flag 'commit': 'False'
+[2022-06-14 23:34:29Z INFO CommandSettings] Flag 'check': 'False'
+[2022-06-14 23:34:29Z INFO CommandSettings] Command 'configure': 'True'
+[2022-06-14 23:34:29Z INFO Terminal] WRITE LINE: 
+[2022-06-14 23:34:29Z INFO Terminal] WRITE LINE: --------------------------------------------------------------------------------
+[2022-06-14 23:34:29Z INFO Terminal] WRITE LINE: |        ____ _ _   _   _       _          _        _   _                      |
+[2022-06-14 23:34:29Z INFO Terminal] WRITE LINE: |       / ___(_) |_| | | |_   _| |__      / \   ___| |_(_) ___  _ __  ___      |
+[2022-06-14 23:34:29Z INFO Terminal] WRITE LINE: |      | |  _| | __| |_| | | | | '_ \    / _ \ / __| __| |/ _ \| '_ \/ __|     |
+[2022-06-14 23:34:29Z INFO Terminal] WRITE LINE: |      | |_| | | |_|  _  | |_| | |_) |  / ___ \ (__| |_| | (_) | | | \__ \     |
+[2022-06-14 23:34:29Z INFO Terminal] WRITE LINE: |       \____|_|\__|_| |_|\__,_|_.__/  /_/   \_\___|\__|_|\___/|_| |_|___/     |
+[2022-06-14 23:34:29Z INFO Terminal] WRITE LINE: |                                                                              |
+[2022-06-14 23:34:29Z INFO Terminal] WRITE: |                       
+[2022-06-14 23:34:29Z INFO Terminal] WRITE: Self-hosted runner registration
+[2022-06-14 23:34:29Z INFO Terminal] WRITE LINE:                         |
+[2022-06-14 23:34:29Z INFO Terminal] WRITE LINE: |                                                                              |
+[2022-06-14 23:34:29Z INFO Terminal] WRITE LINE: --------------------------------------------------------------------------------
+[2022-06-14 23:34:29Z INFO ConfigurationManager] ConfigureAsync
+[2022-06-14 23:34:29Z INFO ConfigurationStore] IsConfigured()
+[2022-06-14 23:34:29Z INFO ConfigurationStore] IsConfigured: False
+[2022-06-14 23:34:29Z INFO ConfigurationManager] Is configured: False
+[2022-06-14 23:34:29Z INFO CommandSettings] Arg 'url': 'https://github.com/EzzioMoreira/githubactions'
+[2022-06-14 23:34:29Z INFO CommandSettings] Remove url from Arg dictionary.
+[2022-06-14 23:34:29Z INFO CommandSettings] Arg 'token': '***'
+[2022-06-14 23:34:29Z INFO CommandSettings] Remove token from Arg dictionary.
+[2022-06-14 23:34:30Z INFO ConfigurationManager] Http response code: OK from 'POST https://api.github.com/actions/runner-registration'
+[2022-06-14 23:34:30Z INFO ConfigurationManager] cred retrieved via GitHub auth
+[2022-06-14 23:34:30Z INFO RunnerServer] Establish connection with 100 seconds timeout.
+[2022-06-14 23:34:30Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2022-06-14 23:34:30Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2022-06-14 23:34:30Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2022-06-14 23:34:30Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2022-06-14 23:34:30Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2022-06-14 23:34:31Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2022-06-14 23:34:31Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2022-06-14 23:34:31Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2022-06-14 23:34:31Z INFO Terminal] WRITE LINE: 
+[2022-06-14 23:34:31Z INFO ConfigurationManager] Test Connection complete.
+[2022-06-14 23:34:31Z INFO HostContext] Well known directory 'Bin': '/home/ezzio/Documentos/projetos/particular/githubactions/actions-runner/bin'
+[2022-06-14 23:34:31Z INFO HostContext] Well known directory 'Root': '/home/ezzio/Documentos/projetos/particular/githubactions/actions-runner'
+[2022-06-14 23:34:31Z INFO HostContext] Well known config file 'RSACredentials': '/home/ezzio/Documentos/projetos/particular/githubactions/actions-runner/.credentials_rsaparams'
+[2022-06-14 23:34:31Z INFO RSAFileKeyManager] Found existing RSA key parameters file /home/ezzio/Documentos/projetos/particular/githubactions/actions-runner/.credentials_rsaparams
+[2022-06-14 23:34:32Z INFO CommandSettings] Arg 'runnergroup': ''
+[2022-06-14 23:34:32Z INFO CommandSettings] Flag 'unattended': 'False'
+[2022-06-14 23:34:32Z INFO PromptManager] ReadValue
+[2022-06-14 23:34:32Z INFO Terminal] WRITE: Enter the name of the runner group to add this runner to: 
+[2022-06-14 23:34:32Z INFO Terminal] WRITE: [press Enter for Default] 
+[2022-06-14 23:34:32Z INFO Terminal] READ LINE
+[2022-06-14 23:34:35Z INFO Terminal] Read value: ''
+[2022-06-14 23:34:35Z INFO PromptManager] Falling back to the default: 'Default'
+[2022-06-14 23:34:35Z INFO Terminal] WRITE LINE: 
+[2022-06-14 23:34:35Z INFO ConfigurationManager] Found a self-hosted runner group with id 1 and name Default
+[2022-06-14 23:34:35Z INFO CommandSettings] Flag 'disableupdate': 'False'
+[2022-06-14 23:34:35Z INFO CommandSettings] Flag 'ephemeral': 'False'
+[2022-06-14 23:34:35Z INFO CommandSettings] Arg 'name': ''
+[2022-06-14 23:34:35Z INFO CommandSettings] Flag 'unattended': 'False'
+[2022-06-14 23:34:35Z INFO PromptManager] ReadValue
+[2022-06-14 23:34:35Z INFO Terminal] WRITE: Enter the name of runner: 
+[2022-06-14 23:34:35Z INFO Terminal] WRITE: [press Enter for pagar] 
+[2022-06-14 23:34:35Z INFO Terminal] READ LINE
+[2022-06-14 23:34:45Z INFO Terminal] Read value: ''
+[2022-06-14 23:34:45Z INFO PromptManager] Falling back to the default: 'pagar'
+[2022-06-14 23:34:45Z INFO Terminal] WRITE LINE: 
+[2022-06-14 23:34:45Z INFO CommandSettings] Arg 'labels': ''
+[2022-06-14 23:34:45Z INFO CommandSettings] Flag 'unattended': 'False'
+[2022-06-14 23:34:45Z INFO PromptManager] ReadValue
+[2022-06-14 23:34:45Z INFO Terminal] WRITE: This runner will have the following labels: 'self-hosted', 'Linux', 'X64' 
+Enter any additional labels (ex. label-1,label-2): 
+[2022-06-14 23:34:45Z INFO Terminal] WRITE: [press Enter to skip] 
+[2022-06-14 23:34:45Z INFO Terminal] READ LINE
+[2022-06-14 23:34:51Z INFO Terminal] Read value: ''
+[2022-06-14 23:34:51Z INFO Terminal] WRITE LINE: 
+[2022-06-14 23:34:51Z INFO CommandSettings] Flag 'disableupdate': 'False'
+[2022-06-14 23:34:51Z INFO CommandSettings] Flag 'disableupdate': 'False'
+[2022-06-14 23:34:51Z INFO CommandSettings] Flag 'ephemeral': 'False'
+[2022-06-14 23:34:51Z INFO ConfigurationStore] Saving OAuth credential @ /home/ezzio/Documentos/projetos/particular/githubactions/actions-runner/.credentials
+[2022-06-14 23:34:51Z INFO ConfigurationStore] Credentials Saved.
+[2022-06-14 23:34:51Z INFO ConfigurationStore] HasCredentials()
+[2022-06-14 23:34:51Z INFO ConfigurationStore] stored True
+[2022-06-14 23:34:51Z INFO CredentialManager] GetCredentialProvider
+[2022-06-14 23:34:51Z INFO CredentialManager] Creating type OAuth
+[2022-06-14 23:34:51Z INFO CredentialManager] Creating credential type: OAuth
+[2022-06-14 23:34:51Z INFO RSAFileKeyManager] Loading RSA key parameters from file /home/ezzio/Documentos/projetos/particular/githubactions/actions-runner/.credentials_rsaparams
+[2022-06-14 23:34:51Z INFO RunnerServer] Establish connection with 100 seconds timeout.
+[2022-06-14 23:34:51Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2022-06-14 23:34:51Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2022-06-14 23:34:51Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2022-06-14 23:34:51Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2022-06-14 23:34:51Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2022-06-14 23:34:52Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2022-06-14 23:34:52Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2022-06-14 23:34:52Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2022-06-14 23:34:53Z WARN GitHubActionsService] Authentication failed with status code 401.
+Transfer-Encoding: chunked
+WWW-Authenticate: Bearer
+Strict-Transport-Security: max-age=2592000
+X-TFS-ProcessId: e7ead27e-90d2-428c-aef6-c028f95ab562
+ActivityId: 704ee943-287f-45b3-a745-0380f945efd4
+X-TFS-Session: 92f7d16a-fb07-4203-87dc-9ba32c5beb00
+X-VSS-E2EID: bc767913-0798-4596-87a6-16194947a28a
+X-VSS-SenderDeploymentId: fc1cfc90-fc40-edcb-6d0f-3b1380ee7b68
+X-TFS-ServiceError: The+user+%27System%3aPublicAccess%3baaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa%27+is+not+authorized+to+access+this+resource.
+X-VSS-S2STargetService: 0000005A-0000-8888-8000-000000000000/visualstudio.com
+X-Cache: CONFIG_NOCACHE
+X-MSEdge-Ref: Ref A: 349EA79030E54C31A110453DA046B1B7 Ref B: RIO02EDGE0510 Ref C: 2022-06-14T23:34:52Z
+Date: Tue, 14 Jun 2022 23:34:52 GMT
+
+[2022-06-14 23:34:53Z INFO RSAFileKeyManager] Loading RSA key parameters from file /home/ezzio/Documentos/projetos/particular/githubactions/actions-runner/.credentials_rsaparams
+[2022-06-14 23:34:53Z INFO RSAFileKeyManager] Loading RSA key parameters from file /home/ezzio/Documentos/projetos/particular/githubactions/actions-runner/.credentials_rsaparams
+[2022-06-14 23:34:54Z INFO GitHubActionsService] AAD Correlation ID for this token request: Unknown
+[2022-06-14 23:34:54Z INFO CommandSettings] Arg 'work': ''
+[2022-06-14 23:34:54Z INFO CommandSettings] Flag 'unattended': 'False'
+[2022-06-14 23:34:54Z INFO PromptManager] ReadValue
+[2022-06-14 23:34:54Z INFO Terminal] WRITE: Enter name of work folder: 
+[2022-06-14 23:34:54Z INFO Terminal] WRITE: [press Enter for _work] 
+[2022-06-14 23:34:54Z INFO Terminal] READ LINE
+[2022-06-14 23:35:04Z INFO Terminal] Read value: ''
+[2022-06-14 23:35:04Z INFO PromptManager] Falling back to the default: '_work'
+[2022-06-14 23:35:04Z INFO ConfigurationStore] Saving runner settings.
+[2022-06-14 23:35:04Z INFO ConfigurationStore] Settings Saved.
+[2022-06-14 23:35:04Z INFO Terminal] WRITE LINE: 
+[2022-06-14 23:35:04Z INFO Terminal] WRITE LINE: 
+[2022-06-14 23:35:04Z INFO SystemDControlManager] Service name 'actions.runner.EzzioMoreira-githubactions.pagar.service' display name 'GitHub Actions Runner (EzzioMoreira-githubactions.pagar)' will be used for service configuration.
+[2022-06-14 23:35:04Z INFO HostContext] Well known directory 'Bin': '/home/ezzio/Documentos/projetos/particular/githubactions/actions-runner/bin'
+[2022-06-14 23:35:04Z INFO HostContext] Well known directory 'Root': '/home/ezzio/Documentos/projetos/particular/githubactions/actions-runner'
+[2022-06-14 23:35:04Z INFO HostContext] Well known directory 'Bin': '/home/ezzio/Documentos/projetos/particular/githubactions/actions-runner/bin'
+[2022-06-14 23:35:04Z INFO HostContext] Well known directory 'Bin': '/home/ezzio/Documentos/projetos/particular/githubactions/actions-runner/bin'
+[2022-06-14 23:35:04Z INFO HostContext] Well known directory 'Root': '/home/ezzio/Documentos/projetos/particular/githubactions/actions-runner'
+[2022-06-14 23:35:04Z INFO UnixUtil] Which: 'chmod'
+[2022-06-14 23:35:04Z INFO UnixUtil] Location: '/usr/bin/chmod'
+[2022-06-14 23:35:04Z INFO UnixUtil] Running /usr/bin/chmod 755 "/home/ezzio/Documentos/projetos/particular/githubactions/actions-runner/svc.sh"
+[2022-06-14 23:35:04Z INFO ProcessInvokerWrapper] Starting process:
+[2022-06-14 23:35:04Z INFO ProcessInvokerWrapper]   File name: '/usr/bin/chmod'
+[2022-06-14 23:35:04Z INFO ProcessInvokerWrapper]   Arguments: '755 "/home/ezzio/Documentos/projetos/particular/githubactions/actions-runner/svc.sh"'
+[2022-06-14 23:35:04Z INFO ProcessInvokerWrapper]   Working directory: '/home/ezzio/Documentos/projetos/particular/githubactions/actions-runner'
+[2022-06-14 23:35:04Z INFO ProcessInvokerWrapper]   Require exit code zero: 'True'
+[2022-06-14 23:35:04Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2022-06-14 23:35:04Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2022-06-14 23:35:04Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2022-06-14 23:35:04Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2022-06-14 23:35:04Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2022-06-14 23:35:04Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2022-06-14 23:35:04Z INFO ProcessInvokerWrapper] Process started with process id 841181, waiting for process exit.
+[2022-06-14 23:35:04Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2022-06-14 23:35:04Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2022-06-14 23:35:04Z INFO ProcessInvokerWrapper] Finished process 841181 with exit code 0, and elapsed time 00:00:00.0065453.
+[2022-06-14 23:35:04Z INFO Listener] Runner execution has finished with return code 0
