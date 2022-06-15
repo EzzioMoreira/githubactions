@@ -3,7 +3,8 @@ name: CI Metal Corp
 on:
   push:
     branches:
-      - "main"
+      - "stage"
+  workflow_dispatch:
     
 jobs:
   teste:
