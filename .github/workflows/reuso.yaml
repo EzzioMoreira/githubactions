@@ -8,3 +8,4 @@ jobs:
     uses: "mentoriaiac/cicd_centralizado/.github/workflows/terraform_valida_modulo.yaml@v1"
     secrets:
       token: ${{ secrets.TOKEN }}
+
