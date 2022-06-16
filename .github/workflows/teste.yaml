@@ -8,7 +8,7 @@ on:
     
 jobs:
   teste:
-    runs-on: ubuntu-20.04
+    runs-on: localhost
     strategy:
       matrix:
         go: [ '1.15', '1.16', '1.17' ]
@@ -22,7 +22,7 @@ jobs:
       - run: go run hello.go
 
   build:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     needs: [teste]
     steps:
     - name: Checkout code
