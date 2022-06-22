@@ -1,0 +1,13 @@
+name: Build, Tag e Push da imagem para repositório ECR
+on:
+  push:
+    branches:
+      - "main"
+
+jobs:
+  build:
+    uses: https://github.com/EzzioMoreira/cicd_centralizado/.github/workflows/build_push_image_ecr.yaml@feat/add-actions-ecr
+    secrets:
+      ECR_REPOSITORY: ${{ secrets.ECR_REPOSITORY }}
+      AWS_ACCESS_KEY_ID: ${{ secrets.PRD_AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.PRD_AWS_SECRET_ACCESS_KEY }}
