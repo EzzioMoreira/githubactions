@@ -8,6 +8,8 @@ on:
 jobs:
   build:
     uses: "EzzioMoreira/cicd_centralizado/.github/workflows/build_push_image_ecr.yaml@feat/add-actions-ecr"
+    with:
+      ECR_REPOSITORY: "metalcorp"
     secrets:
       ECR_REPOSITORY: ${{ secrets.ECR_REPOSITORY }}
       AWS_ACCESS_KEY_ID: ${{ secrets.PRD_AWS_ACCESS_KEY_ID }}
