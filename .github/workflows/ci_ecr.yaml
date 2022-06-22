@@ -6,7 +6,7 @@ on:
 
 jobs:
   build:
-    uses: github.com/EzzioMoreira/cicd_centralizado/.github/workflows/build_push_image_ecr.yaml@feat/add-actions-ecr
+    uses: "EzzioMoreira/cicd_centralizado/.github/workflows/build_push_image_ecr.yaml@feat/add-actions-ecr"
     secrets:
       ECR_REPOSITORY: ${{ secrets.ECR_REPOSITORY }}
       AWS_ACCESS_KEY_ID: ${{ secrets.PRD_AWS_ACCESS_KEY_ID }}
