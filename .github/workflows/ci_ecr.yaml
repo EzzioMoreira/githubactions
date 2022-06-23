@@ -10,6 +10,7 @@ jobs:
     uses: "EzzioMoreira/cicd_centralizado/.github/workflows/build_push_image_ecr.yaml@feat/add-actions-ecr"
     with:
       ECR_REPOSITORY: "metalcorp"
+      AWS_REGION: "us-east-1"
     secrets:
       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
