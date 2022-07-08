@@ -5,6 +5,12 @@ on:
       - "main"
   workflow_dispatch:
 
+env:
+  ECR_REPOSITORY: metalcorp
+  CLUSTER_CDC: "arn::us-east-1:12345678:amazon-msk-cdc"
+  HOSTNAME_CDC: "cluster-msk-cdc-prd"
+  CDC_TAG: $(echo cdc${GITHUB_SHA} | cut -c1-8)
+
 jobs:
   build-push:
     runs-on: ubuntu-20.04
@@ -32,10 +38,11 @@ jobs:
     - name: Build, tag, and push image cluster cdc
       env:
         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-        ECR_REPOSITORY: metalcorp
-        CLUSTER_ARN: "arn::us-east-1:12345678:amazon-msk-cdc"
-        HOSTNAME_LABEL: "cluster-msk-cdc-prd"
+        ECR_REPOSITORY: ${{ env.ECR_REPOSITORY }}
+        CLUSTER_ARN: ${{ env.CLUSTER_CDC }}
+        HOSTNAME_LABEL: ${{ env.HOSTNAME_CDC }}
       run: |
+        echo $CDC_TAG
         envsubst '$CLUSTER_ARN,$HOSTNAME_LABEL' < exemple_conf.yaml > ./conf.yaml
         docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$(echo cdc${GITHUB_SHA} | cut -c1-8) .
         docker push $ECR_REGISTRY/$ECR_REPOSITORY:$(echo cdc${GITHUB_SHA} | cut -c1-8)
