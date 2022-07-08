@@ -12,6 +12,7 @@ jobs:
     strategy:
       matrix:
         cluster_arn: ["arn::cdc:123", "arn::msk:1234"]
+        pretag: [cdc, msk]
     if: |
       always() &&
       !contains(needs.*.result, 'failure') &&
@@ -36,8 +37,8 @@ jobs:
       env:
         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
         ECR_REPOSITORY: metalcorp
-        CLUSTER_ARN: ${{ matrix.cluster_arn }}
+        CLUSTER_ARN: ${{ matrix.cluster_arn }} 
       run: |
-        envsubst '$CLUSTER_ARN,$HOSTNAME_LABEL' < ./conf.yaml
-        docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$(echo ${GITHUB_SHA} | cut -c1-8) .
-        docker push $ECR_REGISTRY/$ECR_REPOSITORY:$(echo ${GITHUB_SHA} | cut -c1-8)
+        envsubst '$CLUSTER_ARN,$HOSTNAME_LABEL' < exemple_conf.yaml > ./conf.yaml
+        docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:${{ matrix.pretag }}${GITHUB_SHA::8} .
+        docker push $ECR_REGISTRY/$ECR_REPOSITORY:${{ matrix.pretag }}${GITHUB_SHA::7}
