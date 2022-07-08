@@ -12,7 +12,6 @@ jobs:
     strategy:
       matrix:
         cluster_arn: ["arn::cdc:123", "arn::msk:1234"]
-        hostname_label: ["cluster-msk-cdc-sdx", "cluster-msk-sdx" ]
     if: |
       always() &&
       !contains(needs.*.result, 'failure') &&
@@ -38,8 +37,7 @@ jobs:
         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
         ECR_REPOSITORY: metalcorp
         CLUSTER_ARN: ${{ matrix.cluster_arn }}
-        HOSTNAME_LABEL: ${{ matrix.hostname_label }}
       run: |
-        envsubst '$CLUSTER_ARN,$HOSTNAME_LABEL' < conf.yaml
+        envsubst '$CLUSTER_ARN,$HOSTNAME_LABEL' < ./conf.yaml
         docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$(echo ${GITHUB_SHA} | cut -c1-8) .
         docker push $ECR_REGISTRY/$ECR_REPOSITORY:$(echo ${GITHUB_SHA} | cut -c1-8)
