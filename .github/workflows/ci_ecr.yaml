@@ -48,5 +48,6 @@ jobs:
         HOSTNAME_LABEL: "cluster-msk-sdx"
       run: |
         envsubst '$CLUSTER_ARN,$HOSTNAME_LABEL' < exemple_conf.yaml > ./conf.yaml
+        cat conf.yaml
         docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:msk${GITHUB_SHA::8} .
         docker push $ECR_REGISTRY/$ECR_REPOSITORY:msk${GITHUB_SHA::8}
