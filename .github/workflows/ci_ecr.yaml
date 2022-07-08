@@ -35,11 +35,10 @@ jobs:
         ECR_REPOSITORY: metalcorp
         CLUSTER_ARN: "arn::us-east-1:12345678:amazon-msk-cdc"
         HOSTNAME_LABEL: "cluster-msk-cdc-prd"
-        CDC_TAG: cdc${GITHUB_SHA::8}
       run: |
         envsubst '$CLUSTER_ARN,$HOSTNAME_LABEL' < exemple_conf.yaml > ./conf.yaml
-        docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$CDC_TAG .
-        docker push $ECR_REGISTRY/$ECR_REPOSITORY:$CDC_TAG
+        docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$(echo cdc${GITHUB_SHA} | cut -c1-8) .
+        docker push $ECR_REGISTRY/$ECR_REPOSITORY:$(echo cdc${GITHUB_SHA} | cut -c1-8)
     
     - name: Build, tag, and push image cluster msk
       env:
@@ -47,8 +46,7 @@ jobs:
         ECR_REPOSITORY: metalcorp
         CLUSTER_ARN: "arn::us-east-1:12345678:amazon-msk"
         HOSTNAME_LABEL: "cluster-msk-prd"
-        MSK_TAG: msk${GITHUB_SHA::8}
       run: |
         envsubst '$CLUSTER_ARN,$HOSTNAME_LABEL' < exemple_conf.yaml > ./conf.yaml
-        docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$MSK_TAG .
-        docker push $ECR_REGISTRY/$ECR_REPOSITORY:$MSK_TAG
+        docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$(echo msk${GITHUB_SHA} | cut -c1-8) .
+        docker push $ECR_REGISTRY/$ECR_REPOSITORY:$(echo msk${GITHUB_SHA} | cut -c1-8)
