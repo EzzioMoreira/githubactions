@@ -35,7 +35,7 @@ jobs:
         ECR_REPOSITORY: metalcorp
         CLUSTER_ARN: "arn::us-east-1:12345678:amazon-msk-cdc"
         HOSTNAME_LABEL: "cluster-msk-cdc-prd"
-        CDC_TAG: cdc{GITHUB_SHA::8}
+        CDC_TAG: cdc${GITHUB_SHA::8}
       run: |
         envsubst '$CLUSTER_ARN,$HOSTNAME_LABEL' < exemple_conf.yaml > ./conf.yaml
         docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$CDC_TAG .
@@ -47,7 +47,7 @@ jobs:
         ECR_REPOSITORY: metalcorp
         CLUSTER_ARN: "arn::us-east-1:12345678:amazon-msk"
         HOSTNAME_LABEL: "cluster-msk-prd"
-        MSK_TAG: msk{GITHUB_SHA::8}
+        MSK_TAG: msk${GITHUB_SHA::8}
       run: |
         envsubst '$CLUSTER_ARN,$HOSTNAME_LABEL' < exemple_conf.yaml > ./conf.yaml
         docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$MSK_TAG .
